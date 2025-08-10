@@ -231,4 +231,4 @@ Type `yes` when prompted. This will remove all AWS resources created by this con
 
 ## License
 
-This Terraform configuration is provided as-is for educational and development purposes.
+This Terraform configuration is provided as-is for educational purposes.
