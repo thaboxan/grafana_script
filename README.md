@@ -2,11 +2,20 @@
 
 This Terraform configuration deploys Grafana as a containerized application on AWS ECS Fargate, accessible through an Application Load Balancer (ALB).
 
-
+## Architecture Overview
 
 ```
 Internet → ALB → ECS Fargate (Grafana Container)
 ```
+
+For a detailed architecture diagram with complete component relationships, security groups, and data flow, see [ARCHITECTURE.md](./ARCHITECTURE.md).
+
+## Quick Architecture Summary
+- **VPC**: `10.0.0.0/16` with public subnets in 2 AZs
+- **Load Balancer**: Application Load Balancer for HTTP access
+- **Compute**: ECS Fargate (0.5 vCPU, 1GB RAM) running Grafana container
+- **Security**: Security groups implementing least-privilege access
+- **Monitoring**: CloudWatch Logs with Container Insights enabled
 
 ## Prerequisites
 
